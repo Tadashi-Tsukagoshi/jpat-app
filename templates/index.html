@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pattern Classifier</title>
+    <link rel="stylesheet" href="./static/stylesheet.css">
+</head>
+<body>
+    <header>   
+        <a class="header-logo" href="#">Japanese Traditional Pattern Classifier</a>
+    </header>
+
+    <div class="main">  
+        <h1>AIが日本の伝統模様を識別します</h1>
+        <div class="container">
+            <img src="static/images/seigaiha.jpg" alt="seigaiha pattern" width="80" height="80" style="filter: grayscale(100%);">
+            <img src="static/images/shippou.png" alt="shippou pattern" width="80" height="80" style="filter: grayscale(100%);">
+            <img src="static/images/sayagata.png" alt="sayagata pattern" width="80" height="80" style="filter: grayscale(100%);">
+            <img src="static/images/yagasuri.jpg" alt="yagasuri pattern" width="80" height="80" style="filter: grayscale(100%);">
+            <img src="static/images/sankuzushi.png" alt="sankuzushi pattern" width="80" height="80" style="filter: grayscale(100%);">
+            <img src="static/images/shima.jpg" alt="shima pattern" width="80" height="80" style="filter: grayscale(100%);">
+        </div>
+        <p>日本の伝統模様かな？と思ったら画像をアップロードして識別してみよう！<br>
+        ※ 現時点で識別できる模様は上記6種類のみとなります
+        </p>
+        <form method="POST" enctype="multipart/form-data">
+            <input class="file_choose" type="file" name="file">
+            <input class="btn" value="識別" type="submit">
+        </form>
+        <div class="answer">{{answer}}</div>
+
+    </div>
+
+    <footer>
+        <small>
+            ※ Aidemy Premium「AIアプリ開発講座」の最終課題として作成・公開しています<br>
+            designed & developed by TSUKAGOSHI
+        </small>   
+    </footer>
+</body>
+</html>

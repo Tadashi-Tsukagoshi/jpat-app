@@ -1,0 +1,74 @@
+header {
+    background-color: #8e8c8f;
+    height: 60px;
+    margin: -8px;
+    display: flex;
+    justify-content: center; /* 横方向の中央揃え */
+    align-items: center; /* 縦方向の中央揃え */
+}
+
+.header-logo {
+    color: #fff;
+    font-size: 20px;
+    margin: 15px 25px;
+    font-family: Avenir, sans-serif;
+}
+
+
+.main {
+    height: 490px;
+}
+
+h1 {
+    color: #444444;
+    margin: 120px 0px 60px 0px;
+    text-align: center;
+}
+
+p {
+    color: #444444;
+    margin: 50px 0px 20px 0px;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+.answer {
+    color: #444444;
+    font-size: 32px;
+    margin: 50px 200px 150px 200px;
+    text-align: center;
+    font-weight: bold; /* フォントを太字にする */
+    font-family: Avenir, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    margin: 0 10px; /* 左右に10pxの隙間を空ける */
+}
+
+
+
+footer {
+    background-color: #F7F7F7;
+    height: 60px;
+    margin: -8px;
+    position: relative;
+    text-align: center;
+}
+
+
+small {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
