@@ -8,7 +8,7 @@ from tensorflow.keras.optimizers import SGD ####追加
 import numpy as np
 
 classes = ["「 青海波 SEIGAIHA 」","「 七宝  SHIPPOU 」","「 紗綾形  SAYAGATA 」","「 矢絣  YAGASURI 」","「 三崩し  SANKUZUSHI 」","「 縞  SHIMA 」"]
-image_size = 70
+image_size = 100
 
 UPLOAD_FOLDER = "uploads"
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
