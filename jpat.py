@@ -6,10 +6,6 @@ from tensorflow.keras.preprocessing import image
 
 import numpy as np
 
-#### Keras Optimizer SGDのインポート
-from keras.optimizers import SGD
-
-
 classes = ["「 青海波 SEIGAIHA 」","「 七宝  SHIPPOU 」","「 紗綾形  SAYAGATA 」","「 矢絣  YAGASURI 」","「 三崩し  SANKUZUSHI 」","「 縞  SHIMA 」"]
 image_size = 70
 
@@ -21,17 +17,7 @@ app = Flask(__name__)
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-#### model = load_model('./my_model.h5') #学習済みモデルをロード
-
-
-#### カスタムオプティマイザの定義
-class CustomSGD(SGD):
-    def __init__(self, learning_rate=0.01, momentum=0.0):
-        super().__init__(learning_rate, momentum)
-
-#### モデルのロード
-model = load_model("my_model.h5", custom_objects={"CustomSGD": CustomSGD})
-
+model = load_model('./model.h5') #学習済みモデルをロード
 
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
