@@ -20,7 +20,13 @@ def allowed_file(filename):
 
 ###model = load_model('./model.h5') #学習済みモデルをロード
 
-model = load_model('./model.h5', custom_objects={'SGD': SGD})  # SGDをカスタムオブジェクトとして指定してモデルをロード
+# SGDオプティマイザを再定義
+class CustomSGD(SGD):
+    pass
+
+# モデルをロードする際にカスタムオブジェクトとして指定
+model = load_model('./model.h5', custom_objects={'CustomSGD': CustomSGD})
+
 
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
